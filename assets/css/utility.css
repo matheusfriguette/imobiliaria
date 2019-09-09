@@ -1,0 +1,7 @@
+.vh-90 {
+    height: 90vh;
+}
+
+.object-cover {
+    object-fit: cover;
+}
