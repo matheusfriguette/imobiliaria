@@ -1,0 +1,158 @@
+body {
+  background-color: #edf2f7;
+  color: #2d3748;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+}
+
+/* Reset de cores */
+.text-primary {
+  color: #38b2ac !important;
+}
+
+.bg-primary,
+.btn-primary {
+  background-color: #38b2ac !important;
+  border: none;
+}
+
+.btn-outline-primary {
+  color: #38b2ac;
+  border-color: #38b2ac;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active {
+  background-color: #38b2ac !important;
+  border-color: #38b2ac;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.custom-control-input:checked ~ .custom-control-label::before,
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+  background-color: #319795 !important;
+  border: none;
+}
+
+/* Utilidades de texto e cor */
+.bg-light {
+  background-color: #f7fafc !important;
+}
+
+.bg-muted {
+  background-color: #718096 !important;
+}
+
+.bg-dark {
+  background-color: #2d3748 !important;
+}
+
+.text-light {
+  color: #f7fafc !important;
+}
+
+.text-muted {
+  color: #718096 !important;
+}
+
+.text-dark {
+  color: #2d3748 !important;
+}
+
+.font-weight-medium {
+  font-weight: 500;
+}
+
+.font-weight-semibold {
+  font-weight: 600;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-22 {
+  font-size: 22px;
+}
+
+.font-size-24 {
+  font-size: 24px;
+}
+
+.font-size-32 {
+  font-size: 32px;
+}
+
+/* Componentes */
+.main-cover > div {
+  z-index: 10;
+}
+
+.main-cover > img {
+  opacity: 0.5;
+  object-fit: cover;
+  height: 400px;
+  width: 100%;
+}
+
+.main-cover h1 {
+  font-size: 1.5rem;
+}
+
+.iconbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  width: 56px;
+}
+
+.iconbox-sm {
+  height: 28px;
+  width: 28px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 0.2rem;
+  object-fit: cover;
+}
+
+.page-sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: white;
+  border-right: 2px solid #e2e8f0;
+}
+
+.page-sidebar a.nav-link {
+  color: #718096;
+}
+
+.page-sidebar a.nav-link:hover,
+.page-sidebar a.nav-link.active {
+  color: #1a202c;
+}
+
+@media (min-width: 600px) {
+  .main-cover h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-cover > img {
+    height: 80vh;
+  }
+
+  .main-cover h1 {
+    font-size: 2.5rem;
+  }
+}
