@@ -1,7 +1,16 @@
-.vh-90 {
-    height: 90vh;
+.bg-primary {
+    background-color: #38b2ac !important;
 }
 
-.object-cover {
+.cover-image {
+    opacity: 0.5;
     object-fit: cover;
+}
+
+.cover-content {
+    z-index: 10;
+}
+
+.vh-80 {
+    height: 80vh;
 }

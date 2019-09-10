@@ -2,23 +2,23 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="../../assets/css/utility.css">
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../../assets/css/utility.css" />
 
   <title>Imobiliária</title>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container d-flex justify-content-between">
-        <a class="navbar-brand" href="#">Imobiliária</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container d-flex justify-content-between w-100">
+        <a class="navbar-brand" href="#">Imobilé</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar"
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@
         <div class="collapse navbar-collapse flex-grow-0" id="navBar">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Buscar imóveis</a>
@@ -38,17 +38,80 @@
       </div>
     </nav>
   </header>
-  <section class="position-relative">
-    <div class="position-absolute d-flex justify-content-center align-items-top w-100 h-100">
-      <h1 class="text-white mt-4">Bem-vindo a Imobiliaria</h1>
+  <section>
+    <div class="position-relative bg-primary">
+      <div class="position-absolute w-100 h-100 cover-content">
+        <div class="container h-100">
+          <div class="row h-100">
+            <div class="col-md-7 d-flex flex-column justify-content-center">
+              <h1 class="text-white">Compre ou alugue já o seu imóvel dos seus sonhos</h1>
+            </div>
+            <div class="col-md-5 d-flex flex-column justify-content-center">
+              <div class="card shadow">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label>O que deseja?</label>
+                    <div class="d-flex">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" name="tipo" id="tipoCompra">
+                        <label class="custom-control-label" for="tipoCompra">Adquirir</label>
+                      </div>
+                      <div class="custom-control custom-radio ml-4">
+                        <input type="radio" class="custom-control-input" name="tipo" id="tipoAluguel">
+                        <label class="custom-control-label" for="tipoAluguel">Alugar</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Bairro</label>
+                    <select class="form-control">
+                      <option>Bairro</option>
+                    </select>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Bairro</label>
+                        <select class="form-control">
+                          <option>Bairro</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Bairro</label>
+                        <select class="form-control">
+                          <option>Bairro</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary btn-block">Buscar imóveis</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="w-100 vh-80 cover-image" src="../../assets/img/home-cover.jpg" alt="" />
     </div>
-    <img class="vh-90 vw-100 object-cover" src="../../assets/img/home-cover.jpg">
   </section>
   <section>
-    VALORES
+    <div class="pt-4">
+      <h3 class="text-center">Sobre a Imobilé</h3>
+      <p class="text-center font-size-18">Aqui na Imobilé somos movidos pelos seguintes valores:</p>
+      <div>Lista de icones clichê</div>
+    </div>
   </section>
   <section>
-    MISSAO
+    <div class="bg-light pt-4">
+      <h3 class="text-center">Por que nos escolher?</h3>
+      <div class="row">
+        <div class="col-md-4">Fazemos tudo do jeito certo</div>
+        <div class="col-md-4">Nois é pika memo</div>
+        <div class="col-md-4">Parceiros de qualidade</div>
+      </div>
+    </div>
   </section>
   <footer></footer>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
