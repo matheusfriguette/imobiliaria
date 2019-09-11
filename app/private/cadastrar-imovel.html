@@ -120,42 +120,131 @@
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <label>Usuário</label>
-                      <input class="form-control" name="user" type="text" />
+                      <label>Categoria</label>
+                      <div class="d-flex">
+                        <div class="custom-control custom-radio">
+                          <input class="custom-control-input" name="categoria" type="radio" id="categoriaCasa" checked />
+                          <label class="custom-control-label" for="categoriaCasa">Casa</label>
+                        </div>
+                        <div class="custom-control custom-radio ml-4">
+                          <input class="custom-control-input" name="categoria" type="radio" id="categoriaApartamento" />
+                          <label class="custom-control-label" for="categoriaApartamento">Apartamento</label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <label>Senha</label>
-                      <input class="form-control" name="password" type="password" />
+                      <label>Disponível para</label>
+                      <div class="d-flex">
+                        <div class="custom-control custom-radio">
+                          <input class="custom-control-input" name="tipo" type="radio" id="tipoCompra" checked />
+                          <label class="custom-control-label" for="tipoCompra">Adquirir</label>
+                        </div>
+                        <div class="custom-control custom-radio ml-4">
+                          <input class="custom-control-input" name="tipo" type="radio" id="tipoAluguel" />
+                          <label class="custom-control-label" for="tipoAluguel">Alugar</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Proprietário</label>
+                  <input class="form-control" name="owner" type="text" />
+                </div>
+              </form>
+                <div class="form-group">
+                  <label>Descrição</label>
+                  <input class="form-control" name="description" type="text" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="card shadow-sm border-0 overflow-hidden mt-5">
+            <div class="card-body">
+              <div class="text-uppercase font-size-14 font-weight-medium">Detahes técnicos do imóvel</div>
+              <form class="mt-4">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label>Salas de estar</label>
+                      <input class="form-control" name="livingRooms" type="number" />
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label>Salas de jantar</label>
+                      <input class="form-control" name="dinnerRooms" type="number" />
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label>Quartos</label>
+                      <input class="form-control" name="bedrooms" type="number" />
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label>Suítes</label>
+                      <input class="form-control" name="suites" type="number" />
                     </div>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-lg-8">
+                  <div class="col-lg-6">
                     <div class="form-group">
-                      <label>Nome</label>
-                      <input class="form-control" name="name" type="text" />
+                      <label>Aréa em m²</label>
+                      <input class="form-control" name="area" type="text" />
                     </div>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-3">
                     <div class="form-group">
-                      <label>CPF</label>
-                      <input class="form-control" name="cpf" type="text" />
+                      <label>Vagas na garagem</label>
+                      <input class="form-control" name="parkingSpaces" type="text" />
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label>Armário embutido?</label>
+                      <div class="custom-control custom-checkbox ">
+                        <input class="custom-control-input" type="checkbox" id="armarioEmbutidoCasa" />
+                        <label class="custom-control-label" for="armarioEmbutidoCasa"></label>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <div class="form-group">
+                  <label>Data de construção</label>
+                  <input class="form-control" name="description" type="text" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="card shadow-sm border-0 overflow-hidden mt-5">
+            <div class="card-body">
+              <div class="text-uppercase font-size-14 font-weight-medium">Informações específicas do apartamento</div>
+              <form class="mt-4">
                 <div class="row">
-                  <div class="col-lg-6">
+                  <div class="col-lg-3">
                     <div class="form-group">
-                      <label>Telefone de contato</label>
-                      <input class="form-control" name="phoneContact" type="text" />
+                      <label>Andar</label>
+                      <input class="form-control" name="floor" type="number" />
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <label>Telefone celular</label>
-                      <input class="form-control" name="phoneMobile" type="text" />
+                      <label>Valor do condominío</label>
+                      <input class="form-control" name="value" type="text" />
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label>Portaria 24hrs?</label>
+                      <div class="custom-control custom-checkbox ">
+                        <input class="custom-control-input" type="checkbox" id="portaria" />
+                        <label class="custom-control-label" for="portaria"></label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -164,76 +253,18 @@
           </div>
           <div class="card shadow-sm border-0 overflow-hidden mt-5">
             <div class="card-body">
-              <div class="text-uppercase font-size-14 font-weight-medium">Endereço</div>
-              <form class="mt-4">
-                <div class="form-group">
-                  <label>CEP</label>
-                  <input class="form-control" name="cep" type="text" />
+              <div class="text-uppercase font-size-14 font-weight-medium">Fotos do imóvel</div>
+              <div class="mt-4">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="customFile" />
+                  <label class="custom-file-label" for="customFile">Escolher imagem</label>
                 </div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label>Estado</label>
-                      <input class="form-control" name="state" type="text" />
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label>Cidade</label>
-                      <input class="form-control" name="city" type="text" />
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label>Bairro</label>
-                      <input class="form-control" name="neighborhood" type="text" />
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-9">
-                    <div class="form-group">
-                      <label>Rua</label>
-                      <input class="form-control" name="street" type="text" />
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label>Número</label>
-                      <input class="form-control" name="number" type="text" />
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="card shadow-sm border-0 overflow-hidden mt-5">
-            <div class="card-body">
-              <div class="text-uppercase font-size-14 font-weight-medium">Informações do funcionário</div>
-              <form class="mt-4">
-                <div class="form-group">
-                  <label>Cargo</label>
-                  <input class="form-control" name="position" type="text" />
-                </div>
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <label>Salário base</label>
-                      <input class="form-control" name="position" type="text" />
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <label>Comissão</label>
-                      <input class="form-control" name="position" type="text" />
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Data de ingresso</label>
-                  <input class="form-control" name="position" type="text" />
-                </div>
-              </form>
+              </div>
+              <small class="form-text text-muted">
+                Limite de 6 fotos.
+              </small>
+              <div class="row mt-4" id="housePictures">
+              </div>
             </div>
           </div>
         </div>

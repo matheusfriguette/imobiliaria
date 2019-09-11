@@ -129,8 +129,10 @@ body {
 .page-sidebar {
   width: 100vw;
   height: 100vh;
+  z-index: 1020;
   margin-left: -100vw;
-  transition: 0.3s;
+  transform: translateX(0);
+  transition: 0.3s cubic-bezier(0, 0, 0.42, 1);
   background-color: white;
   border-right: 2px solid #e2e8f0;
 }
@@ -145,11 +147,8 @@ body {
 
 .page-sidebar a.nav-link:hover,
 .page-sidebar a.nav-link.active {
-  color: #1a202c;
-}
-
-.page-sidebar.active ~ .page-content {
-  display: none;
+  background-color: #edf2f7;
+  color: #38b2ac;
 }
 
 .page-content {
@@ -170,6 +169,7 @@ a[data-toggle='collapse'] {
 }
 
 .action-bar {
+  z-index: 1010;
   border-top: 2px solid #e2e8f0;
 }
 
@@ -184,7 +184,8 @@ a[data-toggle='collapse'] {
     width: 300px;
     margin-left: 0;
   }
-  .page-content, .action-bar {
+  .page-content,
+  .action-bar {
     margin-left: 300px;
   }
 
