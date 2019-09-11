@@ -127,10 +127,10 @@ body {
 }
 
 .page-sidebar {
-  width: 300px;
+  width: 100vw;
   height: 100vh;
-  margin-left: -300px;
-  transition: all 0.3s;
+  margin-left: -100vw;
+  transition: 0.3s;
   background-color: white;
   border-right: 2px solid #e2e8f0;
 }
@@ -149,7 +149,7 @@ body {
 }
 
 .page-sidebar.active ~ .page-content {
-  margin-left: 300px;
+  display: none;
 }
 
 .page-content {
@@ -169,6 +169,10 @@ a[data-toggle='collapse'] {
   position: relative;
 }
 
+.action-bar {
+  border-top: 2px solid #e2e8f0;
+}
+
 @media (min-width: 600px) {
   .main-cover h1 {
     font-size: 2rem;
@@ -177,9 +181,10 @@ a[data-toggle='collapse'] {
 
 @media (min-width: 992px) {
   .page-sidebar {
+    width: 300px;
     margin-left: 0;
   }
-  .page-content {
+  .page-content, .action-bar {
     margin-left: 300px;
   }
 

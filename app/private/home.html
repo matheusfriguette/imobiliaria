@@ -1,158 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- Stylesheets -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../../assets/css/custom.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Imobiliária</title>
-  </head>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../assets/css/custom.css" />
 
-  <body>
-    <div class="d-flex">
-      <div class="page-sidebar position-fixed py-5 px-4 d-flex flex-column">
-        <a class="h3">Imobilé</a>
-        <nav class="flex-grow-1 mt-4">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active px-0 py-1 dropdown-toggle" href="#funcionarios" data-toggle="collapse">
-                <div class="d-flex align-items-baseline font-weight-medium">
-                  <div class="iconbox iconbox-sm">
-                    <i class="fa fa-group font-size-18 text-muted"></i>
-                  </div>
-                  <span class="ml-3">Funcionários</span>
-                </div>
-              </a>
-              <ul class="collapse list-unstyled ml-5" id="funcionarios">
-                <li class="nav-item">
-                  <a class="nav-link active px-0 py-1" href="listar-funcionarios.html">Listar</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link px-0 py-1" href="cadastrar-funcionario.html">Cadastrar</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-0 py-1 dropdown-toggle" href="#usuarios" data-toggle="collapse">
-                <div class="d-flex align-items-baseline font-weight-medium">
-                  <div class="iconbox iconbox-sm">
-                    <i class="fa fa-user font-size-18 text-muted"></i>
-                  </div>
-                  <span class="ml-3">Usuários</span>
-                </div>
-              </a>
-              <ul class="collapse list-unstyled ml-5" id="usuarios">
-                <li class="nav-item">
-                  <a class="nav-link px-0 py-1" href="listar-usuarios.html">Listar</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link px-0 py-1" href="cadastrar-usuario.html">Cadastrar</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-0 py-1 dropdown-toggle" href="#imoveis" data-toggle="collapse">
-                <div class="d-flex align-items-baseline font-weight-medium">
-                  <div class="iconbox iconbox-sm">
-                    <i class="fa fa-building font-size-18 text-muted"></i>
-                  </div>
-                  <span class="ml-3">Imóveis</span>
-                </div>
-              </a>
-              <ul class="collapse list-unstyled ml-5" id="imoveis">
-                <li class="nav-item">
-                  <a class="nav-link px-0 py-1" href="listar-imoveis.html">Listar</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link px-0 py-1" href="cadastrar-imovel.html">Cadastrar</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-0 py-1" href="listar-interesses.html">
-                <div class="d-flex align-items-baseline font-weight-medium">
-                  <div class="iconbox iconbox-sm">
-                    <i class="fa fa-envelope font-size-18 text-muted"></i>
-                  </div>
-                  <span class="ml-3">Interesses</span>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <button class="btn btn-primary">Sair</button>
+  <title>Imobiliária</title>
+</head>
+
+<body>
+  <div class="d-flex">
+    <div class="page-sidebar position-fixed py-5 px-4 d-flex flex-column">
+      <div class="d-flex justify-content-between align-items-center">
+        <a class="h3 mb-0">Imobilé</a>
+        <button class="btn btn-primary d-lg-none sidebar-toggle" type="button">
+          <i class="fa fa-angle-right"></i>
+        </button>
       </div>
-      <div class="page-content">
-        <div class="d-block d-lg-none py-2 px-4 bg-white shadow-sm">
-          <div class="container-fluid">
-            <button type="button" id="sidebarToggle" class="btn btn-primary">
-              <i class="fa fa-bars"></i>
-            </button>
-          </div>
+      <nav class="flex-grow-1 mt-4">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active px-0 py-1 dropdown-toggle" href="#funcionarios" data-toggle="collapse">
+              <div class="d-flex align-items-baseline font-weight-medium">
+                <div class="iconbox iconbox-sm">
+                  <i class="fa fa-group font-size-18 text-muted"></i>
+                </div>
+                <span class="ml-3">Funcionários</span>
+              </div>
+            </a>
+            <ul class="collapse list-unstyled ml-5" id="funcionarios">
+              <li class="nav-item">
+                <a class="nav-link active px-0 py-1" href="listar-funcionarios.html">Listar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0 py-1" href="cadastrar-funcionario.html">Cadastrar</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-0 py-1 dropdown-toggle" href="#usuarios" data-toggle="collapse">
+              <div class="d-flex align-items-baseline font-weight-medium">
+                <div class="iconbox iconbox-sm">
+                  <i class="fa fa-user font-size-18 text-muted"></i>
+                </div>
+                <span class="ml-3">Usuários</span>
+              </div>
+            </a>
+            <ul class="collapse list-unstyled ml-5" id="usuarios">
+              <li class="nav-item">
+                <a class="nav-link px-0 py-1" href="listar-usuarios.html">Listar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0 py-1" href="cadastrar-usuario.html">Cadastrar</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-0 py-1 dropdown-toggle" href="#imoveis" data-toggle="collapse">
+              <div class="d-flex align-items-baseline font-weight-medium">
+                <div class="iconbox iconbox-sm">
+                  <i class="fa fa-building font-size-18 text-muted"></i>
+                </div>
+                <span class="ml-3">Imóveis</span>
+              </div>
+            </a>
+            <ul class="collapse list-unstyled ml-5" id="imoveis">
+              <li class="nav-item">
+                <a class="nav-link px-0 py-1" href="listar-imoveis.html">Listar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0 py-1" href="cadastrar-imovel.html">Cadastrar</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-0 py-1" href="listar-interesses.html">
+              <div class="d-flex align-items-baseline font-weight-medium">
+                <div class="iconbox iconbox-sm">
+                  <i class="fa fa-envelope font-size-18 text-muted"></i>
+                </div>
+                <span class="ml-3">Interesses</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="btn btn-primary">Sair</button>
+    </div>
+    <div class="page-content">
+      <div class="d-lg-none container py-2 bg-white shadow-sm">
+        <button class="btn btn-primary sidebar-toggle" type="button">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+      <div class="container py-5">
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+          <h4>Funcionários cadastrados</h4>
+          <button class="btn btn-primary">
+            <span>Cadastrar novo</span>
+            <i class="fa fa-plus ml-2"></i>
+          </button>
         </div>
-        <div class="container py-5">
-          <div class="d-flex justify-content-between align-items-center">
-            <h4>Funcionários cadastrados</h4>
-            <button class="btn btn-primary">
-              <span>Cadastrar novo</span>
-              <i class="fa fa-plus ml-2"></i>
-            </button>
-          </div>
-          <table class="table bg-white shadow-sm mt-4">
-            <thead class="bg-light">
-              <tr class="text-uppercase">
-                <th class="text-muted font-weight-semibold" scope="col">#</th>
-                <th class="text-muted font-weight-semibold" scope="col">First</th>
-                <th class="text-muted font-weight-semibold" scope="col">Last</th>
-                <th class="text-muted font-weight-semibold" scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <table class="table bg-white shadow-sm mt-4">
+          <thead class="bg-light">
+            <tr class="text-uppercase">
+              <th class="text-muted font-weight-semibold" scope="col">#</th>
+              <th class="text-muted font-weight-semibold" scope="col">First</th>
+              <th class="text-muted font-weight-semibold" scope="col">Last</th>
+              <th class="text-muted font-weight-semibold" scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../../assets/js/main.js"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+
 </html>
