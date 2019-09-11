@@ -107,17 +107,17 @@
         </nav>
       </div>
       <div class="page-content">
-        <div class="container py-5 mb-5 px-md-5">
-          <a class="text-decoration-none text-muted" href="listar-funcionarios.html">
-            <i class="fa fa-angle-left"></i>
-            <span class="ml-2">Voltar para listagem</span>
-          </a>
-          <h4 class="mt-2">Cadastrar novo funcionário</h4>
-          <div class="card shadow-sm border-0 overflow-hidden mt-5">
-            <div class="card-body">
-              <div class="text-uppercase font-size-14 font-weight-medium">Informações básicas</div>
-              <form class="mt-4">
-                <div class="row">
+        <form>
+          <div class="container py-5 mb-5 px-md-5">
+            <a class="text-decoration-none text-muted" href="listar-imoveis.html">
+              <i class="fa fa-angle-left"></i>
+              <span class="ml-2">Voltar para listagem</span>
+            </a>
+            <h4 class="mt-2">Cadastrar novo imóvel</h4>
+            <div class="card shadow-sm border-0 overflow-hidden mt-5">
+              <div class="card-body">
+                <div class="text-uppercase font-size-14 font-weight-medium">Informações básicas</div>
+                <div class="row mt-4">
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label>Categoria</label>
@@ -153,19 +153,16 @@
                   <label>Proprietário</label>
                   <input class="form-control" name="owner" type="text" />
                 </div>
-              </form>
                 <div class="form-group">
                   <label>Descrição</label>
                   <input class="form-control" name="description" type="text" />
                 </div>
-              </form>
+              </div>
             </div>
-          </div>
-          <div class="card shadow-sm border-0 overflow-hidden mt-5">
-            <div class="card-body">
-              <div class="text-uppercase font-size-14 font-weight-medium">Detahes técnicos do imóvel</div>
-              <form class="mt-4">
-                <div class="row">
+            <div class="card shadow-sm border-0 overflow-hidden mt-5">
+              <div class="card-body">
+                <div class="text-uppercase font-size-14 font-weight-medium">Detalhes técnicos do imóvel</div>
+                <div class="row mt-4">
                   <div class="col-lg-3">
                     <div class="form-group">
                       <label>Salas de estar</label>
@@ -218,14 +215,12 @@
                   <label>Data de construção</label>
                   <input class="form-control" name="description" type="text" />
                 </div>
-              </form>
+              </div>
             </div>
-          </div>
-          <div class="card shadow-sm border-0 overflow-hidden mt-5">
-            <div class="card-body">
-              <div class="text-uppercase font-size-14 font-weight-medium">Informações específicas do apartamento</div>
-              <form class="mt-4">
-                <div class="row">
+            <div class="card shadow-sm border-0 overflow-hidden mt-5">
+              <div class="card-body">
+                <div class="text-uppercase font-size-14 font-weight-medium">Informações específicas do apartamento</div>
+                <div class="row mt-4">
                   <div class="col-lg-3">
                     <div class="form-group">
                       <label>Andar</label>
@@ -248,32 +243,31 @@
                     </div>
                   </div>
                 </div>
-              </form>
+              </div>
             </div>
-          </div>
-          <div class="card shadow-sm border-0 overflow-hidden mt-5">
-            <div class="card-body">
-              <div class="text-uppercase font-size-14 font-weight-medium">Fotos do imóvel</div>
-              <div class="mt-4">
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="customFile" />
-                  <label class="custom-file-label" for="customFile">Escolher imagem</label>
+            <div class="card shadow-sm border-0 overflow-hidden mt-5">
+              <div class="card-body">
+                <div class="text-uppercase font-size-14 font-weight-medium">Fotos do imóvel</div>
+                <div class="form-group mt-4">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile" />
+                    <label class="custom-file-label" for="customFile">Escolher imagem</label>
+                  </div>
+                  <small class="form-text text-muted">
+                    Limite de 6 fotos.
+                  </small>
                 </div>
-              </div>
-              <small class="form-text text-muted">
-                Limite de 6 fotos.
-              </small>
-              <div class="row mt-4" id="housePictures">
+                <div class="row mt-4" id="housePictures"></div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="action-bar fixed-bottom bg-white">
-          <div class="container py-3 d-flex justify-content-end">
-            <button class="btn btn-outline-primary">Cancelar</button>
-            <button class="btn btn-primary ml-2">Salvar</button>
+          <div class="action-bar fixed-bottom bg-white">
+            <div class="container py-3 d-flex justify-content-end">
+              <button class="btn btn-outline-primary">Cancelar</button>
+              <button class="btn btn-primary ml-2">Salvar</button>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
 
