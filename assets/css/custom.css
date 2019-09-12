@@ -152,11 +152,13 @@ body {
   height: 100%;
   transition: 0.3s;
   background-color: rgba(0, 0, 0, 0);
+  display: none;
   z-index: 1015;
 }
 
 .page-sidebar.active ~ .page-sidebar-shadow {
   background-color: rgba(0, 0, 0, 0.4);
+  display: block;
 }
 
 .page-sidebar.active {

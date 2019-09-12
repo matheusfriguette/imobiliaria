@@ -1,10 +1,15 @@
-// let loginForm = document.forms.login;
-// loginForm.addEventListener('submit', (event) => {
-//   event.preventDefault();
-//   if (loginForm.checkValidity() === false) {
-//     loginForm.classList.add('was-validated');
-//   }
-// });
+$(document.forms).each((index, element) => {
+  console.log($(this));
+  $(this).on('submit', (event) => {
+    console.log(1);
+    event.preventDefault();
+    if (element.checkValidity() === false) {
+      console.log(1);
+
+      element.classList.add('was-validated');
+    }
+  });
+});
 
 $(document).ready(function() {
   $('.sidebar-toggle').on('click', function() {

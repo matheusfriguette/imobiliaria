@@ -108,7 +108,7 @@
         </nav>
       </div>
       <div class="page-content">
-        <form>
+        <form class="needs-validation" name="cliente" novalidate>
           <div class="container py-5 mb-5 px-md-5">
             <a class="text-decoration-none text-muted" href="listar-clientes.html">
               <i class="fa fa-angle-left"></i>
@@ -122,31 +122,55 @@
                   <div class="col-lg-8">
                     <div class="form-group">
                       <label>Nome</label>
-                      <input class="form-control" name="name" type="text" />
+                      <input class="form-control" name="nome" type="text" required />
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                   <div class="col-lg-4">
                     <div class="form-group">
                       <label>CPF</label>
-                      <input class="form-control" name="cpf" type="text" />
+                      <input class="form-control" name="cpf" type="text" maxlength="11" minlength="11" regex="^[0-9]*$" required />
+                      <small class="form-text text-muted">
+                        Apenas números.
+                      </small>
+                      <div class="invalid-feedback">
+                        Digite um CPF válido.
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label>E-mail</label>
-                  <input class="form-control" name="email" type="text" />
+                  <input class="form-control" name="email" type="email" required />
+                  <div class="invalid-feedback">
+                    Digite um e-mail válido.
+                  </div>
                 </div>
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label>Telefone de contato</label>
-                      <input class="form-control" name="phoneContact" type="text" />
+                      <input class="form-control" name="telefoneContato" type="text" maxlength="10" minlength="10" regex="^[0-9]*$" required />
+                      <small class="form-text text-muted">
+                        Apenas números, com DDD incluso.
+                      </small>
+                      <div class="invalid-feedback">
+                        Digite um número de telefone válido.
+                      </div>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label>Telefone celular</label>
-                      <input class="form-control" name="phoneMobile" type="text" />
+                      <input class="form-control" name="telefoneCelular" type="text" maxlength="10" minlength="11" regex="^[0-9]*$" required />
+                      <small class="form-text text-muted">
+                        Apenas números, com DDD incluso.
+                      </small>
+                      <div class="invalid-feedback">
+                        Digite um número de telefone válido.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -154,19 +178,40 @@
                   <div class="col-lg-4">
                     <div class="form-group">
                       <label>Genêro</label>
-                      <input class="form-control" name="gender" type="text" />
+                      <select class="form-control" name="genero" required>
+                        <option value="">Selecione...</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="naoDefinido">Não definido</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                   <div class="col-lg-4">
                     <div class="form-group">
                       <label>Estado civil</label>
-                      <input class="form-control" name=" maritalStatus" type="text" />
+                      <select class="form-control" name="estadoCivil" required>
+                        <option value="">Selecione...</option>
+                        <option value="solteiro">Solteiro(a)</option>
+                        <option value="casado">Casado(a)</option>
+                        <option value="divorciado">Divorciado(a)</option>
+                        <option value="viuvo">Viúvo(a)</option>
+                        <option value="separado">Separado(a)</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                   <div class="col-lg-4">
                     <div class="form-group">
                       <label>Profissão</label>
-                      <input class="form-control" name="job" type="text" />
+                      <input class="form-control" name="profissao" type="text" required />
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -177,25 +222,34 @@
                 <div class="text-uppercase font-size-14 font-weight-medium">Endereço</div>
                 <div class="form-group mt-4">
                   <label>CEP</label>
-                  <input class="form-control" name="cep" type="text" />
+                  <input class="form-control" name="cep" type="text" required />
                 </div>
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
                       <label>Estado</label>
-                      <input class="form-control" name="state" type="text" />
+                      <input class="form-control" name="estado" type="text" required />
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
                       <label>Cidade</label>
-                      <input class="form-control" name="city" type="text" />
+                      <input class="form-control" name="cidade" type="text" required />
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
                       <label>Bairro</label>
-                      <input class="form-control" name="neighborhood" type="text" />
+                      <input class="form-control" name="bairro" type="text" required />
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -203,13 +257,19 @@
                   <div class="col-md-9">
                     <div class="form-group">
                       <label>Rua</label>
-                      <input class="form-control" name="street" type="text" />
+                      <input class="form-control" name="rua" type="text" required />
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                   <div class="col-md-3">
                     <div class="form-group">
                       <label>Número</label>
-                      <input class="form-control" name="number" type="text" />
+                      <input class="form-control" name="numero" type="text" required />
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -218,7 +278,7 @@
           </div>
           <div class="action-bar fixed-bottom bg-white">
             <div class="container py-3 d-flex justify-content-end">
-              <button class="btn btn-outline-primary">Cancelar</button>
+              <a class="btn btn-outline-primary" href="listar-clientes.html">Cancelar</a>
               <button class="btn btn-primary ml-2">Salvar</button>
             </div>
           </div>

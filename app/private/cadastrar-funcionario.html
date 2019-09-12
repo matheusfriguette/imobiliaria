@@ -109,7 +109,7 @@
       </div>
       <div class="page-sidebar-shadow"></div>
       <div class="page-content">
-        <form>
+        <form class="needs-validation" name="funcionario" novalidate>
           <div class="container py-5 mb-5 px-md-5">
             <a class="text-decoration-none text-muted" href="listar-funcionarios.html">
               <i class="fa fa-angle-left"></i>
@@ -123,13 +123,19 @@
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label>Usuário</label>
-                      <input class="form-control" name="user" type="text" />
+                      <input class="form-control" name="user" type="text" required />
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label>Senha</label>
-                      <input class="form-control" name="password" type="password" />
+                      <input class="form-control" name="password" type="password" minlength="4" maxlength="25" required />
+                      <div class="invalid-feedback">
+                        A senha deve possuir no mínimo 4 caracteres.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -137,13 +143,22 @@
                   <div class="col-lg-8">
                     <div class="form-group">
                       <label>Nome</label>
-                      <input class="form-control" name="name" type="text" />
+                      <input class="form-control" name="name" type="text" required />
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                   <div class="col-lg-4">
                     <div class="form-group">
                       <label>CPF</label>
-                      <input class="form-control" name="cpf" type="text" />
+                      <input class="form-control" name="cpf" type="text" maxlength="11" minlength="11" regex="^[0-9]*$" required />
+                      <small class="form-text text-muted">
+                        Apenas números.
+                      </small>
+                      <div class="invalid-feedback">
+                        Digite um CPF válido.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -151,13 +166,25 @@
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label>Telefone de contato</label>
-                      <input class="form-control" name="phoneContact" type="text" />
+                      <input class="form-control" name="telefoneContato" type="text" maxlength="10" minlength="10" regex="^[0-9]*$" required />
+                      <small class="form-text text-muted">
+                        Apenas números, com DDD incluso.
+                      </small>
+                      <div class="invalid-feedback">
+                        Digite um número de telefone válido.
+                      </div>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label>Telefone celular</label>
-                      <input class="form-control" name="phoneMobile" type="text" />
+                      <input class="form-control" name="telefoneCelular" type="text" maxlength="10" minlength="11" regex="^[0-9]*$" required />
+                      <small class="form-text text-muted">
+                        Apenas números, com DDD incluso.
+                      </small>
+                      <div class="invalid-feedback">
+                        Digite um número de telefone válido.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -168,25 +195,37 @@
                 <div class="text-uppercase font-size-14 font-weight-medium">Endereço</div>
                 <div class="form-group mt-4">
                   <label>CEP</label>
-                  <input class="form-control" name="cep" type="text" />
+                  <input class="form-control" name="cep" type="text" required />
+                  <div class="invalid-feedback">
+                    Esse campo é obrigatório.
+                  </div>
                 </div>
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
                       <label>Estado</label>
-                      <input class="form-control" name="state" type="text" />
+                      <input class="form-control" name="estado" type="text" required />
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
                       <label>Cidade</label>
-                      <input class="form-control" name="city" type="text" />
+                      <input class="form-control" name="cidade" type="text" required />
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
                       <label>Bairro</label>
-                      <input class="form-control" name="neighborhood" type="text" />
+                      <input class="form-control" name="bairro" type="text" required />
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -194,13 +233,19 @@
                   <div class="col-md-9">
                     <div class="form-group">
                       <label>Rua</label>
-                      <input class="form-control" name="street" type="text" />
+                      <input class="form-control" name="rua" type="text" required />
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                   <div class="col-md-3">
                     <div class="form-group">
                       <label>Número</label>
-                      <input class="form-control" name="number" type="text" />
+                      <input class="form-control" name="numero" type="text" required />
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -211,25 +256,47 @@
                 <div class="text-uppercase font-size-14 font-weight-medium">Informações do funcionário</div>
                 <div class="form-group mt-4">
                   <label>Cargo</label>
-                  <input class="form-control" name="position" type="text" />
+                  <input class="form-control" name="cargo" type="text" required />
+                  <div class="invalid-feedback">
+                    Esse campo é obrigatório.
+                  </div>
                 </div>
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label>Salário base</label>
-                      <input class="form-control" name="position" type="text" />
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">R$</span>
+                        </div>
+                        <input class="form-control" name="salario" type="number" min="0" step=".01" required />
+                        <div class="invalid-feedback">
+                          Esse campo é obrigatório.
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label>Comissão</label>
-                      <input class="form-control" name="position" type="text" />
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">%</span>
+                        </div>
+                        <input class="form-control" name="comissao" type="number" min="0" required />
+                        <div class="invalid-feedback">
+                          Esse campo é obrigatório.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label>Data de ingresso</label>
-                  <input class="form-control" name="position" type="text" />
+                  <input class="form-control" name="dataIngresso" type="date" required />
+                  <div class="invalid-feedback">
+                    Esse campo é obrigatório.
+                  </div>
                 </div>
               </div>
             </div>
