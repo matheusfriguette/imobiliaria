@@ -87,8 +87,11 @@ $(document).ready(function() {
       }
     });
 
-    $(document.forms.imovel.categoria).on('change', (event) => {
+    $(document.forms.imovel.categoria).on('change', () => {
       $('#cardApartamento').toggleClass('d-none');
+    });
+
+    $(document.forms.imovel.tipo).on('change', () => {
       $('#valorImovel').toggleClass('d-none');
       $('#valorAluguel').toggleClass('d-none');
     });
