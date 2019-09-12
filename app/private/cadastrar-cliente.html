@@ -220,9 +220,18 @@
             <div class="card shadow-sm border-0 overflow-hidden mt-5">
               <div class="card-body">
                 <div class="text-uppercase font-size-14 font-weight-medium">Endereço</div>
+                <small class="form-text text-muted">
+                  Informe o CEP para que o restante do endereço seja preenchido automaticamente.
+                </small>
                 <div class="form-group mt-4">
                   <label>CEP</label>
-                  <input class="form-control" name="cep" type="text" required />
+                  <input class="form-control" name="cep" type="text" minlength="8" regex="^[0-9]*$" required />
+                  <small class="form-text text-muted">
+                    Apenas números.
+                  </small>
+                  <div class="invalid-feedback">
+                    Digite um CEP válido.
+                  </div>
                 </div>
                 <div class="row">
                   <div class="col-md-4">
@@ -286,7 +295,7 @@
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
