@@ -164,7 +164,7 @@
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label>Telefone celular</label>
-                      <input class="form-control" name="telefoneCelular" type="text" maxlength="10" minlength="11" regex="^[0-9]*$" required />
+                      <input class="form-control" name="telefoneCelular" type="text" maxlength="11" minlength="10" regex="^[0-9]*$" required />
                       <small class="form-text text-muted">
                         Apenas números, com DDD incluso.
                       </small>
@@ -225,12 +225,15 @@
                 </small>
                 <div class="form-group mt-4">
                   <label>CEP</label>
-                  <input class="form-control" name="cep" type="text" minlength="8" regex="^[0-9]*$" required />
+                  <input class="form-control" name="cep" type="text" minlength="8" maxlength="8" regex="^[0-9]*$" required />
                   <small class="form-text text-muted">
                     Apenas números.
                   </small>
                   <div class="invalid-feedback">
                     Digite um CEP válido.
+                  </div>
+                  <div id="cepInvalido" class="invalid-feedback d-none">
+                    Não foi possível encontrar um endereço com esse CEP.
                   </div>
                 </div>
                 <div class="row">

@@ -193,11 +193,20 @@
             <div class="card shadow-sm border-0 overflow-hidden mt-5">
               <div class="card-body">
                 <div class="text-uppercase font-size-14 font-weight-medium">Endereço</div>
+                <small class="form-text text-muted">
+                  Informe o CEP para que o restante do endereço seja preenchido automaticamente.
+                </small>
                 <div class="form-group mt-4">
                   <label>CEP</label>
-                  <input class="form-control" name="cep" type="text" required />
+                  <input class="form-control" name="cep" type="text" minlength="8" maxlength="8" regex="^[0-9]*$" required />
+                  <small class="form-text text-muted">
+                    Apenas números.
+                  </small>
                   <div class="invalid-feedback">
-                    Esse campo é obrigatório.
+                    Digite um CEP válido.
+                  </div>
+                  <div id="cepInvalido" class="invalid-feedback d-none">
+                    Não foi possível encontrar um endereço com esse CEP.
                   </div>
                 </div>
                 <div class="row">

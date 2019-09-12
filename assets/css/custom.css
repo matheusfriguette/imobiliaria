@@ -204,6 +204,10 @@ a[data-toggle='collapse'] {
   }
 }
 
+.no-validation {
+  border-color: #ced4da !important;
+}
+
 @media (min-width: 992px) {
   .page-sidebar {
     width: 300px;

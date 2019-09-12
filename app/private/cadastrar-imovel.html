@@ -33,7 +33,7 @@
         <nav class="d-flex flex-column h-100 py-5">
           <ul class="nav flex-column flex-grow-1 mx-0">
             <li class="nav-item">
-              <a class="nav-link active mx-2 px-1 py-0 my-1" href="#funcionarios" data-toggle="collapse">
+              <a class="nav-link mx-2 px-1 py-0 my-1" href="#funcionarios" data-toggle="collapse">
                 <div class="d-flex align-items-baseline font-weight-medium">
                   <div class="iconbox iconbox-sm">
                     <i class="fa fa-group font-size-18"></i>
@@ -46,7 +46,7 @@
                   <a class="nav-link mx-1 px-1 py-1" href="listar-funcionarios.html">Listar</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active mx-1 px-1 py-1" href="cadastrar-funcionario.html">Cadastrar</a>
+                  <a class="nav-link mx-1 px-1 py-1" href="cadastrar-funcionario.html">Cadastrar</a>
                 </li>
               </ul>
             </li>
@@ -69,7 +69,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2 my-1 px-1 py-0" href="#imoveis" data-toggle="collapse">
+              <a class="nav-link active mx-2 my-1 px-1 py-0" href="#imoveis" data-toggle="collapse">
                 <div class="d-flex align-items-baseline font-weight-medium">
                   <div class="iconbox iconbox-sm">
                     <i class="fa fa-building font-size-18"></i>
@@ -82,7 +82,7 @@
                   <a class="nav-link mx-1 px-1 py-1" href="listar-imoveis.html">Listar</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link mx-1 px-1 py-1" href="cadastrar-imovel.html">Cadastrar</a>
+                  <a class="nav-link active mx-1 px-1 py-1" href="cadastrar-imovel.html">Cadastrar</a>
                 </li>
               </ul>
             </li>
@@ -310,9 +310,21 @@
             <div class="card shadow-sm border-0 overflow-hidden mt-5">
               <div class="card-body">
                 <div class="text-uppercase font-size-14 font-weight-medium">Endereço</div>
+                <small class="form-text text-muted">
+                  Informe o CEP para que o restante do endereço seja preenchido automaticamente.
+                </small>
                 <div class="form-group mt-4">
                   <label>CEP</label>
-                  <input class="form-control" name="cep" type="text" required />
+                  <input class="form-control" name="cep" type="text" minlength="8" maxlength="8" regex="^[0-9]*$" required />
+                  <small class="form-text text-muted">
+                    Apenas números.
+                  </small>
+                  <div class="invalid-feedback">
+                    Digite um CEP válido.
+                  </div>
+                  <div id="cepInvalido" class="invalid-feedback d-none">
+                    Não foi possível encontrar um endereço com esse CEP.
+                  </div>
                 </div>
                 <div class="row">
                   <div class="col-md-4">
@@ -370,12 +382,19 @@
                 <div class="text-uppercase font-size-14 font-weight-medium">Fotos do imóvel</div>
                 <div class="form-group mt-4">
                   <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="fotoImovel" />
-                    <label class="custom-file-label" for="fotoImovel">Escolher imagem</label>
+                    <input class="custom-file-input" id="fotoImovel" name="fotos" type="file" />
+                    <label class="custom-file-label no-validation" for="fotoImovel">Escolher imagem</label>
                   </div>
                   <small class="form-text text-muted">
                     Limite de 6 fotos.
                   </small>
+                  <div id="fotosInvalido" class="invalid-feedback d-none">
+                    Limite de fotos atingido.
+                  </div>
+                  <input class="form-control d-none" name="numeroFotos" type="number" value="0" min="3" />
+                  <div class="invalid-feedback">
+                    Você precisa enviar pelo menos 3 fotos do imóvel.
+                  </div>
                 </div>
                 <div class="row mt-4" id="fotosImovel"></div>
               </div>
