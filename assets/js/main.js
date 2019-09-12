@@ -12,6 +12,10 @@ $(document).ready(function() {
     $('.page-sidebar').toggleClass('active');
   });
 
+  if (document.forms.pesquisaHome !== undefined) {
+    console.log(1);
+  }
+
   if (document.forms.funcionario !== undefined) {
     $(document.forms.funcionario.cep).on('focusin', (event) => {
       $('#cepInvalido').removeClass('d-block');
