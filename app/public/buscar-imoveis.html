@@ -121,7 +121,7 @@
                       <span class="ml-2">2 suítes</span>
                     </div>
                   </div>
-                  <button class="btn btn-primary btn-block mt-5">Tenho interesse</button>
+                  <button class="btn btn-primary btn-block mt-5" data-toggle="modal" data-target="#interesseModal">Tenho interesse</button>
                 </div>
               </div>
             </div>
@@ -178,7 +178,9 @@
       </div>
     </footer>
 
-    <div class="h-100 w-100"></div>
+    <div class="image-modal">
+        <img src="../../assets/img/home-1.jpg">
+    </div>
 
     <div class="modal fade" id="imovelModal" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg" role="document">
@@ -272,7 +274,56 @@
               </div>
             </div>
             <div class="modal-footer bg-light border-0">
-              <button class="btn btn-primary">Tenho interesse</button>
+              <button class="btn btn-primary" data-dismiss="modal" data-toggle="modal"  data-target="#interesseModal">Tenho interesse</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="interesseModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form class="needs-validation" name="interesse" novalidate>
+            <div class="modal-header">
+              <h5 class="modal-title">Entrar em contato</h5>
+              <button type="button" class="close" data-dismiss="modal">
+                <span>&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label>Nome</label>
+                <input class="form-control" name="nome" type="text" required />
+                <div class="invalid-feedback">
+                  Esse campo é obrigatório.
+                </div>
+              </div>
+              <div class="form-group">
+                <label>E-mail</label>
+                <input class="form-control" name="email" type="email" required />
+                <div class="invalid-feedback">
+                  Digite um e-mail válido.
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Telefone</label>
+                <input class="form-control" name="telefone" type="text" required />
+                <div class="invalid-feedback">
+                  Esse campo é obrigatório.
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Proposta</label>
+                <textarea class="form-control" name="proposta" required></textarea>
+                <div class="invalid-feedback">
+                  Esse campo é obrigatório.
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer bg-light border-0">
+              <button class="btn btn-outline-primary" type="button" data-dismiss="modal">Cancelar</button>
+              <button class="btn btn-primary">Enviar</button>
             </div>
           </form>
         </div>
