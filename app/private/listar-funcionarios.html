@@ -146,7 +146,7 @@
                     </div>
                   </td>
                   <td>
-                    <button class="btn btn-outline-primary btn-sm">
+                    <button class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#funcionarioModal">
                       <i class="fa fa-eye"></i>
                       <span class="ml-2">Visualizar</span>
                     </button>
@@ -168,7 +168,7 @@
                     </div>
                   </td>
                   <td>
-                    <button class="btn btn-outline-primary btn-sm">
+                    <button class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#funcionarioModal">
                       <i class="fa fa-eye"></i>
                       <span class="ml-2">Visualizar</span>
                     </button>
@@ -190,7 +190,7 @@
                     </div>
                   </td>
                   <td>
-                    <button class="btn btn-outline-primary btn-sm">
+                    <button class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#funcionarioModal">
                       <i class="fa fa-eye"></i>
                       <span class="ml-2">Visualizar</span>
                     </button>
@@ -198,6 +198,111 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="funcionarioModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Visualizar funcionário</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body px-4">
+            <div class="py-3">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="font-size-18 font-weight-semibold mb-4">Dados básicos</div>
+                </div>
+                <div class="col-md-8">
+                  <div>
+                    <span class="font-weight-medium">Usuário: </span>
+                    <span>José Pereira</span>
+                  </div>
+                  <div>
+                    <span class="font-weight-medium">Nome: </span>
+                    <span>José Pereira</span>
+                  </div>
+                  <div>
+                    <span class="font-weight-medium">CPF: </span>
+                    <span>José Pereira</span>
+                  </div>
+                  <div>
+                    <span class="font-weight-medium">Telefone de contato: </span>
+                    <span>José Pereira</span>
+                  </div>
+                  <div>
+                    <span class="font-weight-medium">Telefone celular: </span>
+                    <span>José Pereira</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="py-3 border-top">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="font-size-18 font-weight-semibold mb-4">Endereço</div>
+                </div>
+                <div class="col-md-8">
+                  <div>
+                    <span class="font-weight-medium">CEP: </span>
+                    <span>José Pereira</span>
+                  </div>
+                  <div>
+                    <span class="font-weight-medium">Estado: </span>
+                    <span>José Pereira</span>
+                  </div>
+                  <div>
+                    <span class="font-weight-medium">Cidade: </span>
+                    <span>José Pereira</span>
+                  </div>
+                  <div>
+                    <span class="font-weight-medium">Bairro: </span>
+                    <span>José Pereira</span>
+                  </div>
+                  <div>
+                    <span class="font-weight-medium">Rua: </span>
+                    <span>José Pereira</span>
+                  </div>
+                  <div>
+                    <span class="font-weight-medium">Número: </span>
+                    <span>24</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="py-3 border-top">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="font-size-18 font-weight-semibold mb-4">Informações do funcionário</div>
+                </div>
+                <div class="col-md-8">
+                  <div>
+                    <span class="font-weight-medium">Cargo: </span>
+                    <span>José Pereira</span>
+                  </div>
+                  <div>
+                    <span class="font-weight-medium">Salário base: </span>
+                    <span>José Pereira</span>
+                  </div>
+                  <div>
+                    <span class="font-weight-medium">Comissão: </span>
+                    <span>José Pereira</span>
+                  </div>
+                  <div>
+                    <span class="font-weight-medium">Data de ingresso: </span>
+                    <span>José Pereira</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-0 bg-light">
+            <button class="btn btn-primary" data-dismiss="modal">OK</button>
           </div>
         </div>
       </div>
