@@ -13,7 +13,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/b7323e4599.js"></script>
     <link rel="stylesheet" href="../../assets/css/custom.css" />
 
     <title>Imobiliária</title>
@@ -55,42 +55,45 @@
               <div class="col-md-5 d-flex flex-column justify-content-center">
                 <div class="card shadow border-0">
                   <div class="card-body">
-                    <div class="form-group">
-                      <label>O que deseja?</label>
-                      <div class="d-flex">
-                        <div class="custom-control custom-radio">
-                          <input class="custom-control-input" name="tipo" type="radio" id="tipoCompra" checked />
-                          <label class="custom-control-label" for="tipoCompra">Adquirir</label>
-                        </div>
-                        <div class="custom-control custom-radio ml-4">
-                          <input class="custom-control-input" name="tipo" type="radio" id="tipoAluguel" />
-                          <label class="custom-control-label" for="tipoAluguel">Alugar</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label>Bairro</label>
-                      <select class="form-control" name="bairro">
-                        <option>Bairro</option>
-                      </select>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label>Valor minímo</label>
-                          <input class="form-control" name="valor-minimo" type="number" />
+                    <form name="buscaImoveisHome">
+                      <div class="form-group">
+                        <label>O que deseja?</label>
+                        <div class="d-flex">
+                          <div class="custom-control custom-radio">
+                            <input class="custom-control-input" id="tipoCompra" name="tipo" type="radio" checked />
+                            <label class="custom-control-label" for="tipoCompra">Comprar</label>
+                          </div>
+                          <div class="custom-control custom-radio ml-4">
+                            <input class="custom-control-input" id="tipoAluguel" name="tipo" type="radio" />
+                            <label class="custom-control-label" for="tipoAluguel">Alugar</label>
+                          </div>
                         </div>
                       </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label>Valor máximo</label>
-                          <input class="form-control" name="valor-maximo" type="number" />
+                      <div class="form-group">
+                        <label>Bairro</label>
+                        <select class="form-control" name="bairro">
+                          <option value="id1">Bairro 1</option>
+                          <option value="id2">Bairro 2</option>
+                        </select>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>Valor minímo</label>
+                            <input class="form-control" name="valorMinimo" type="number" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>Valor máximo</label>
+                            <input class="form-control" name="valorMaximo" type="number" />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <button class="btn btn-primary btn-block">
-                      Buscar imóveis
-                    </button>
+                      <button class="btn btn-primary btn-block">
+                        Buscar imóveis
+                      </button>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -109,7 +112,7 @@
         <div class="row mt-5">
           <div class="col-md-4 d-flex flex-column align-items-center">
             <div class="iconbox bg-primary text-white">
-              <i class="fa fa-handshake-o fa-2x"></i>
+              <i class="far fa-handshake fa-2x"></i>
             </div>
             <div class="text-center mt-4">
               <h6>Confiança</h6>
@@ -118,7 +121,7 @@
           </div>
           <div class="col-md-4 d-flex flex-column align-items-center">
             <div class="iconbox bg-primary text-white">
-              <i class="fa fa-thumbs-up fa-2x"></i>
+              <i class="far fa-thumbs-up fa-2x"></i>
             </div>
             <div class="text-center mt-4">
               <h6>Honestidade</h6>
@@ -127,7 +130,7 @@
           </div>
           <div class="col-md-4 d-flex flex-column align-items-center">
             <div class="iconbox bg-primary text-white">
-              <i class="fa fa-building fa-2x"></i>
+              <i class="far fa-lightbulb fa-2x"></i>
             </div>
             <div class="text-center mt-4">
               <h6>Qualidade</h6>
@@ -153,15 +156,15 @@
             <h4>Contato</h4>
             <ul class="list-unstyled">
               <li class="py-1">
-                <i class="fa fa-map-marker text-muted"></i>
+                <i class="fas fa-map-marker-alt text-muted"></i>
                 <span class="ml-2 text-dark">Avenida João Naves, 653</span>
               </li>
               <li class="py-1">
-                <i class="fa fa-envelope text-muted"></i>
+                <i class="fas fa-envelope text-muted"></i>
                 <a class="ml-2 text-dark" href="mailto:contato@imobile.com">contato@imobile.com</a>
               </li>
               <li class="py-1">
-                <i class="fa fa-phone text-muted"></i>
+                <i class="fas fa-phone text-muted"></i>
                 <a class="ml-2 text-dark" href="tel:3432232394">34 3223-2394</a>
               </li>
             </ul>
@@ -177,7 +180,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <form class="needs-validation" name="login" novalidate>
-            <div class="modal-header border-0">
+            <div class="modal-header">
               <h5 class="modal-title">Digite seu dados de login</h5>
               <button type="button" class="close" data-dismiss="modal">
                 <span>&times;</span>
@@ -199,7 +202,7 @@
                 </div>
               </div>
             </div>
-            <div class="modal-footer border-0">
+            <div class="modal-footer bg-light border-0">
               <button class="btn btn-primary">Login</button>
             </div>
           </form>
