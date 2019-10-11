@@ -17,28 +17,8 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-      <div class="container d-flex justify-content-between w-100">
-        <a class="navbar-brand" href="#">Imobilé</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <?php include "../core/layout/header.php"; ?>
 
-        <div class="collapse navbar-collapse flex-grow-0" id="navBar">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="home.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="buscar-imoveis.html">Buscar imóveis</a>
-            </li>
-          </ul>
-          <button class="btn btn-primary ml-0 ml-md-4" data-toggle="modal" data-target="#loginModal">Login</button>
-        </div>
-      </div>
-    </nav>
-  </header>
   <section>
     <div class="position-relative bg-primary main-cover">
       <div class="position-absolute w-100 h-100">
@@ -100,38 +80,7 @@
       <img src="../../assets/img/home-cover.jpg" alt="" />
     </div>
   </section>
-  <section class="bg-white">
-    <div class="container py-5">
-      <h3 class="mt-5 pt-5 mt-md-0 pt-md-0 text-center">Sobre a Imobilé</h3>
-      <div class="row mt-5">
-        <div class="col-md-8 pr-md-5">
-          <p class="text-justify font-size-18">Apostando sempre na inovação e na evolução de seu negócio, a Imobilé
-            está a 10 anos atuando no mercado de venda e aluguel de imóveis. Entre as empresas imobiliárias, foi
-            pioneira no oferecimento de uma plataforna on-line, disponibilizando um serviço confiável e de qualidade.
-            Hoje, conta com diversos parceiros estabelecidos no mercado, uma grande equipe e uma estrutura moderna,
-            garantindo a satisfação e a segurança de nossos clientes na prestação de nossos serviços.</p>
-        </div>
-        <div class="col-md-4">
-          <div class="font-size-18 font-weight-semibold mb-2">Nossos parceiros</div>
-          <div class="row">
-            <div class="col-6 py-1 px-1">
-              <img class="partner-image" src="../../assets/img/partner-1.jpg" alt="Parceiro 1">
-            </div>
-            <div class="col-6 py-1 px-1">
-              <img class="partner-image" src="../../assets/img/partner-2.jpg" alt="Parceiro 2">
-            </div>
-            <div class="col-6 py-1 px-1">
-              <img class="partner-image" src="../../assets/img/partner-3.jpg" alt="Parceiro 3">
-            </div>
-            <div class="col-6 py-1 px-1">
-              <img class="partner-image" src="../../assets/img/partner-4.jpg" alt="Parceiro 4">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
+  <section class="py-5">
     <div class="container py-5">
       <h3 class="text-center">Valores</h3>
       <div class="row mt-5">
@@ -165,71 +114,45 @@
       </div>
     </div>
   </section>
-  <footer class="bg-white">
+  <section class="bg-white py-5">
     <div class="container py-5">
-      <div class="row">
-        <div class="col-md-8">
-          <h4>Imobilé</h4>
-          <p>Somos uma empresa de Imobiliária atuando há mais de 8 anos no mercado, sempre buscando a satisfação e
-            aprovação de nossos clientes.</p>
+      <h3 class="mt-5 pt-5 mt-md-0 pt-md-0 text-center">Sobre a Imobilé</h3>
+      <div class="row mt-5">
+        <div class="col-8 mx-auto">
+          <p class="text-justify font-size-18">Apostando sempre na inovação e na evolução de seu negócio, a Imobilé
+            está a 10 anos atuando no mercado de venda e aluguel de imóveis. Entre as empresas imobiliárias, foi
+            pioneira no oferecimento de uma plataforna on-line, disponibilizando um serviço confiável e de qualidade.
+            Hoje, conta com diversos parceiros estabelecidos no mercado, uma grande equipe e uma estrutura moderna,
+            garantindo a satisfação e a segurança de nossos clientes na prestação de nossos serviços.</p>
         </div>
-        <div class="col-md-4">
-          <h4>Contato</h4>
-          <ul class="list-unstyled">
-            <li class="py-1">
-              <i class="fas fa-map-marker-alt text-muted"></i>
-              <span class="ml-2 text-dark">Avenida João Naves, 653</span>
-            </li>
-            <li class="py-1">
-              <i class="fas fa-envelope text-muted"></i>
-              <a class="ml-2 text-dark" href="mailto:contato@imobile.com">contato@imobile.com</a>
-            </li>
-            <li class="py-1">
-              <i class="fas fa-phone text-muted"></i>
-              <a class="ml-2 text-dark" href="tel:3432232394">34 3223-2394</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-top pt-3">
-        © 2019, Imobilé. Todos os direitos reservados.
       </div>
     </div>
-  </footer>
+  </section>
+  <section class="py-5">
+    <div class="container py-5">
+      <h3 class="mt-5 pt-5 mt-md-0 pt-md-0 text-center">Nossos parceiros</h3>
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-6 col-md-3 py-1 px-1">
+              <img class="partner-image" src="../../assets/img/partner-1.jpg" alt="Parceiro 1">
+            </div>
+            <div class="col-6 col-md-3 py-1 px-1">
+              <img class="partner-image" src="../../assets/img/partner-2.jpg" alt="Parceiro 2">
+            </div>
+            <div class="col-6 col-md-3 py-1 px-1">
+              <img class="partner-image" src="../../assets/img/partner-3.jpg" alt="Parceiro 3">
+            </div>
+            <div class="col-6 col-md-3 py-1 px-1">
+              <img class="partner-image" src="../../assets/img/partner-4.jpg" alt="Parceiro 4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <form class="needs-validation" name="login" novalidate>
-          <div class="modal-header">
-            <h5 class="modal-title">Digite seu dados de login</h5>
-            <button type="button" class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="form-group">
-              <label>Usuário</label>
-              <input class="form-control" name="usuario" type="text" required />
-              <div class="invalid-feedback">
-                Digite o nome do usuário.
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Senha</label>
-              <input class="form-control" name="senha" type="password" required />
-              <div class="invalid-feedback">
-                Digite a senha.
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer bg-light border-0">
-            <a href="../private/listar-funcionarios.html" class="btn btn-primary">Login</a>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+  <?php include "../core/layout/footer.php"; ?>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
