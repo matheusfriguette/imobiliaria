@@ -1,3 +1,14 @@
+<?php
+  require "../core/services/connection.service.php";
+  $connection = getConnection();
+
+  
+  if($_SERVER['REQUEST_METHOD'] == "POST") {
+    echo $_POST["nome"];
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,7 +44,7 @@
       <?php $currentPage = 'cadastrar-cliente'; ?>
       <?php include "../core/layout/sidebar.php"; ?>
       <div class="page-content">
-        <form class="needs-validation" name="cliente" novalidate>
+        <form action="cadastrar-cliente.php" method="POST" class="needs-validation" name="cliente" novalidate>
           <div class="container py-5 mb-5 px-md-5">
             <a class="text-decoration-none text-muted" href="listar-clientes.html">
               <i class="fas fa-angle-left"></i>

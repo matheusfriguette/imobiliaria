@@ -1,19 +1,18 @@
 $(document.forms).each((index, element) => {
   $(this).on('submit', (event) => {
-    event.preventDefault();
     if (element.checkValidity() === false) {
-      element.classList.add('was-validated');
+      event.preventDefault();
     }
+    element.classList.add('was-validated');
   });
 });
 
-$(document).ready(function() {
-  $('.sidebar-toggle').on('click', function() {
+$(document).ready(function () {
+  $('.sidebar-toggle').on('click', function () {
     $('.page-sidebar').toggleClass('active');
   });
 
   if (document.forms.pesquisaHome !== undefined) {
-    console.log(1);
   }
 
   if (document.forms.funcionario !== undefined) {
@@ -25,7 +24,6 @@ $(document).ready(function() {
     $(document.forms.funcionario.cep).on('focusout', (event) => {
       if (event.target.validity.valid) {
         $.getJSON('https://viacep.com.br/ws/' + document.forms.funcionario.cep.value + '/json/?callback=?', (data) => {
-          console.log(data);
           if (data.erro === undefined) {
             $(document.forms.funcionario.estado).val(data.uf);
             $(document.forms.funcionario.cidade).val(data.localidade);
@@ -49,7 +47,6 @@ $(document).ready(function() {
     $(document.forms.cliente.cep).on('focusout', (event) => {
       if (event.target.validity.valid) {
         $.getJSON('https://viacep.com.br/ws/' + document.forms.cliente.cep.value + '/json/?callback=?', (data) => {
-          console.log(data);
           if (data.erro === undefined) {
             $(document.forms.cliente.estado).val(data.uf);
             $(document.forms.cliente.cidade).val(data.localidade);
@@ -105,7 +102,7 @@ $(document).ready(function() {
 
         let fileReader = new FileReader();
 
-        fileReader.onload = function(e) {
+        fileReader.onload = function (e) {
           let wrapper = $('<div class="col-md-4 py-2"></div>');
           let img = $('<img class="gallery-image">');
           img.attr('src', fileReader.result);
