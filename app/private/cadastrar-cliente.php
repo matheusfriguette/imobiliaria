@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,7 +21,7 @@
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top shadow-sm">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
         <button class="d-lg-none btn btn-primary sidebar-toggle" type="button">
           <i class="fas fa-bars"></i>
         </button>
@@ -29,121 +29,25 @@
       </nav>
     </header>
     <div class="d-flex mt-4">
-      <div class="page-sidebar position-fixed">
-        <nav class="d-flex flex-column h-100 py-5">
-          <ul class="nav flex-column flex-grow-1 mx-0">
-            <li class="nav-item">
-              <a class="nav-link active mx-2 px-1 py-0 my-1" href="#funcionarios" data-toggle="collapse">
-                <div class="d-flex align-items-baseline font-weight-medium">
-                  <div class="iconbox iconbox-sm">
-                    <i class="fas fa-users font-size-18"></i>
-                  </div>
-                  <span class="ml-3 text-dark">Funcionários</span>
-                </div>
-              </a>
-              <ul class="collapse show list-unstyled ml-5" id="funcionarios">
-                <li class="nav-item">
-                  <a class="nav-link mx-1 px-1 py-1" href="listar-funcionarios.html">Listar</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active mx-1 px-1 py-1" href="cadastrar-funcionario.html">Cadastrar</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2 my-1 px-1 py-0" href="#clientes" data-toggle="collapse">
-                <div class="d-flex align-items-baseline font-weight-medium">
-                  <div class="iconbox iconbox-sm">
-                    <i class="fas fa-user font-size-18"></i>
-                  </div>
-                  <span class="ml-3 text-dark">Clientes</span>
-                </div>
-              </a>
-              <ul class="collapse show list-unstyled ml-5" id="clientes">
-                <li class="nav-item">
-                  <a class="nav-link mx-1 px-1 py-1" href="listar-clientes.html">Listar</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-1 px-1 py-1" href="cadastrar-cliente.html">Cadastrar</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2 my-1 px-1 py-0" href="#imoveis" data-toggle="collapse">
-                <div class="d-flex align-items-baseline font-weight-medium">
-                  <div class="iconbox iconbox-sm">
-                    <i class="fas fa-building font-size-18"></i>
-                  </div>
-                  <span class="ml-3 text-dark">Imóveis</span>
-                </div>
-              </a>
-              <ul class="collapse show list-unstyled ml-5" id="imoveis">
-                <li class="nav-item">
-                  <a class="nav-link mx-1 px-1 py-1" href="listar-imoveis.html">Listar</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-1 px-1 py-1" href="cadastrar-imovel.html">Cadastrar</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2 my-1 px-1 py-0" href="listar-interesses.html">
-                <div class="d-flex align-items-baseline font-weight-medium">
-                  <div class="iconbox iconbox-sm">
-                    <i class="fas fa-envelope-open-text font-size-18"></i>
-                  </div>
-                  <span class="ml-3 text-dark">Interesses</span>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <a class="nav-link mx-2 my-1 px-1 py-0" href="listar-interesses.html">
-            <div class="d-flex align-items-baseline font-weight-medium">
-              <div class="iconbox iconbox-sm">
-                <i class="fas fa-sign-out-alt font-size-18"></i>
-              </div>
-              <span class="ml-3 text-dark">Sair</span>
-            </div>
-          </a>
-        </nav>
-      </div>
-      <div class="page-sidebar-shadow"></div>
+      
+      <?php $currentPage = 'cadastrar-cliente'; ?>
+      <?php include "../core/layout/sidebar.php"; ?>
       <div class="page-content">
-        <form class="needs-validation" name="funcionario" novalidate>
+        <form class="needs-validation" name="cliente" novalidate>
           <div class="container py-5 mb-5 px-md-5">
-            <a class="text-decoration-none text-muted" href="listar-funcionarios.html">
+            <a class="text-decoration-none text-muted" href="listar-clientes.html">
               <i class="fas fa-angle-left"></i>
               <span class="ml-2">Voltar para listagem</span>
             </a>
-            <h4 class="mt-2">Cadastrar novo funcionário</h4>
+            <h4 class="mt-2">Cadastrar novo cliente</h4>
             <div class="card shadow-sm border-0 overflow-hidden mt-5">
               <div class="card-body">
                 <div class="text-uppercase font-size-14 font-weight-medium">Informações básicas</div>
                 <div class="row mt-4">
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <label>Usuário</label>
-                      <input class="form-control" name="user" type="text" required />
-                      <div class="invalid-feedback">
-                        Esse campo é obrigatório.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <label>Senha</label>
-                      <input class="form-control" name="password" type="password" minlength="4" maxlength="25" required />
-                      <div class="invalid-feedback">
-                        A senha deve possuir no mínimo 4 caracteres.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
                   <div class="col-lg-8">
                     <div class="form-group">
                       <label>Nome</label>
-                      <input class="form-control" name="name" type="text" required />
+                      <input class="form-control" name="nome" type="text" required />
                       <div class="invalid-feedback">
                         Esse campo é obrigatório.
                       </div>
@@ -160,6 +64,13 @@
                         Digite um CPF válido.
                       </div>
                     </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>E-mail</label>
+                  <input class="form-control" name="email" type="email" required />
+                  <div class="invalid-feedback">
+                    Digite um e-mail válido.
                   </div>
                 </div>
                 <div class="row">
@@ -184,6 +95,47 @@
                       </small>
                       <div class="invalid-feedback">
                         Digite um número de telefone válido.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="form-group">
+                      <label>Genêro</label>
+                      <select class="form-control" name="genero" required>
+                        <option value="">Selecione...</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="naoDefinido">Não definido</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="form-group">
+                      <label>Estado civil</label>
+                      <select class="form-control" name="estadoCivil" required>
+                        <option value="">Selecione...</option>
+                        <option value="solteiro">Solteiro(a)</option>
+                        <option value="casado">Casado(a)</option>
+                        <option value="divorciado">Divorciado(a)</option>
+                        <option value="viuvo">Viúvo(a)</option>
+                        <option value="separado">Separado(a)</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="form-group">
+                      <label>Profissão</label>
+                      <input class="form-control" name="profissao" type="text" required />
+                      <div class="invalid-feedback">
+                        Esse campo é obrigatório.
                       </div>
                     </div>
                   </div>
@@ -260,59 +212,10 @@
                 </div>
               </div>
             </div>
-            <div class="card shadow-sm border-0 overflow-hidden mt-5">
-              <div class="card-body">
-                <div class="text-uppercase font-size-14 font-weight-medium">Informações do funcionário</div>
-                <div class="form-group mt-4">
-                  <label>Cargo</label>
-                  <input class="form-control" name="cargo" type="text" required />
-                  <div class="invalid-feedback">
-                    Esse campo é obrigatório.
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <label>Salário base</label>
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">R$</span>
-                        </div>
-                        <input class="form-control" name="salario" type="number" min="0" step=".01" required />
-                        <div class="invalid-feedback">
-                          Esse campo é obrigatório.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <label>Comissão</label>
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">%</span>
-                        </div>
-                        <input class="form-control" name="comissao" type="number" min="0" required />
-                        <div class="invalid-feedback">
-                          Esse campo é obrigatório.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Data de ingresso</label>
-                  <input class="form-control" name="dataIngresso" type="date" required />
-                  <div class="invalid-feedback">
-                    Esse campo é obrigatório.
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="action-bar fixed-bottom bg-white">
             <div class="container py-3 d-flex justify-content-end">
-              <button class="btn btn-outline-primary">Cancelar</button>
+              <a class="btn btn-outline-primary" href="listar-clientes.html">Cancelar</a>
               <button class="btn btn-primary ml-2">Salvar</button>
             </div>
           </div>

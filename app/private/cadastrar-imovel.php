@@ -29,85 +29,8 @@
       </nav>
     </header>
     <div class="d-flex mt-4">
-      <div class="page-sidebar position-fixed">
-        <nav class="d-flex flex-column h-100 py-5">
-          <ul class="nav flex-column flex-grow-1 mx-0">
-            <li class="nav-item">
-              <a class="nav-link mx-2 px-1 py-0 my-1" href="#funcionarios" data-toggle="collapse">
-                <div class="d-flex align-items-baseline font-weight-medium">
-                  <div class="iconbox iconbox-sm">
-                    <i class="fas fa-users font-size-18"></i>
-                  </div>
-                  <span class="ml-3 text-dark">Funcionários</span>
-                </div>
-              </a>
-              <ul class="collapse show list-unstyled ml-5" id="funcionarios">
-                <li class="nav-item">
-                  <a class="nav-link mx-1 px-1 py-1" href="listar-funcionarios.html">Listar</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-1 px-1 py-1" href="cadastrar-funcionario.html">Cadastrar</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2 my-1 px-1 py-0" href="#clientes" data-toggle="collapse">
-                <div class="d-flex align-items-baseline font-weight-medium">
-                  <div class="iconbox iconbox-sm">
-                    <i class="fas fa-user font-size-18"></i>
-                  </div>
-                  <span class="ml-3 text-dark">Clientes</span>
-                </div>
-              </a>
-              <ul class="collapse show list-unstyled ml-5" id="clientes">
-                <li class="nav-item">
-                  <a class="nav-link mx-1 px-1 py-1" href="listar-clientes.html">Listar</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-1 px-1 py-1" href="cadastrar-cliente.html">Cadastrar</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active mx-2 my-1 px-1 py-0" href="#imoveis" data-toggle="collapse">
-                <div class="d-flex align-items-baseline font-weight-medium">
-                  <div class="iconbox iconbox-sm">
-                    <i class="fas fa-building font-size-18"></i>
-                  </div>
-                  <span class="ml-3 text-dark">Imóveis</span>
-                </div>
-              </a>
-              <ul class="collapse show list-unstyled ml-5" id="imoveis">
-                <li class="nav-item">
-                  <a class="nav-link mx-1 px-1 py-1" href="listar-imoveis.html">Listar</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active mx-1 px-1 py-1" href="cadastrar-imovel.html">Cadastrar</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2 my-1 px-1 py-0" href="listar-interesses.html">
-                <div class="d-flex align-items-baseline font-weight-medium">
-                  <div class="iconbox iconbox-sm">
-                    <i class="fas fa-envelope-open-text font-size-18"></i>
-                  </div>
-                  <span class="ml-3 text-dark">Interesses</span>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <a class="nav-link mx-2 my-1 px-1 py-0" href="listar-interesses.html">
-            <div class="d-flex align-items-baseline font-weight-medium">
-              <div class="iconbox iconbox-sm">
-                <i class="fas fa-sign-out-alt font-size-18"></i>
-              </div>
-              <span class="ml-3 text-dark">Sair</span>
-            </div>
-          </a>
-        </nav>
-      </div>
-      <div class="page-sidebar-shadow"></div>
+      <?php $currentPage = 'cadastrar-imovel'; ?>
+      <?php include "../core/layout/sidebar.php"; ?>
       <div class="page-content">
         <form class="needs-validation" name="imovel" novalidate>
           <div class="container py-5 mb-5 px-md-5">
